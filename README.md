@@ -15,7 +15,7 @@
 Создайте класс и пометьте его аннотацией Repository, либо создайте бин репозитория в Java Config классе.
 Добавьте в поле класса String, которое содержит ваше содержание вашего скрипта. Само содержание вы можете считать с помощью кода ниже. Вам надо будет передать в метод read название вашего скрипта, который лежит в папке resources. Например так: read(myScript.sql).
 Создайте метод getProductName(String name), который будет принимать имя и возвращать название продукта из базы данных.
-```
+```java
 private static String read(String scriptFileName) {
         try (InputStream is = new ClassPathResource(scriptFileName).getInputStream();
              BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(is))) {
